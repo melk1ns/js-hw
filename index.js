@@ -1,11 +1,13 @@
 //task 1
 const degreesC = 200;
-console.log("degreesF", degreesC + 32);
+console.log("degreesF", (degreesC * 9) / 5 + 32);
 //task 2
 const days = 4;
 console.log("hours", days * 24);
 console.log("minutes", days * 24 * 60);
 //task 3
+const hp = 1;
+const energy = 1;
 console.log("hp", Math.random() * (200 - 35) + 35) - 35;
 console.log("energy", Math.random() * (350 - 47) + 47) - 47;
 //task 4
