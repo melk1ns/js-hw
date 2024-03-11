@@ -1,6 +1,7 @@
 //task 1
 result = 5 + 5 + "5";
 console.log(result);
+console.log(typeof result);
 //task 2
 const email = "abcd@gmail.com";
 console.log(email.includes("@"));
