@@ -6,10 +6,10 @@ const days = 4;
 console.log("hours", days * 24);
 console.log("minutes", days * 24 * 60);
 //task 3
-const hp = 1;
-const energy = 1;
-console.log("hp", Math.random() * (200 - 35) + 35) - 35;
-console.log("energy", Math.random() * (350 - 47) + 47) - 47;
+const hp = 1000;
+const energy = 1000;
+console.log("hp", hp - Math.random() * (200 - 35) + 35);
+console.log("energy", energy - Math.random() * (350 - 47) + 47);
 //task 4
 const sum = 3050;
 console.log(sum - (sum * 10) / 100);
