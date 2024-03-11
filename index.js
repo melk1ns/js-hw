@@ -12,10 +12,16 @@ let myString =
 console.log(myString);
 
 let myNumber = 0;
-console.log(myNumber + 10);
+const summ = myNumber + 10;
+console.log(summ);
 
 let myNull = null;
 console.log(myNull);
 
 const userName = prompt("Please, enter your name");
 alert("Welcome " + userName);
+
+confirm("You agree to the terms");
+
+alert("Warning about dangerous actions!");
+confirm("confirm the action");
