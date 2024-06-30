@@ -4,6 +4,7 @@ function logItems(array) {
     console.log(`${i + 1} - ${array[i]}`);
   }
 }
+
 logItems(["Mango", "Poly", "Ajax"]);
 //task 2
 function calculateEngravingPrice(message, pricePerWord) {
