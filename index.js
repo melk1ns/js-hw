@@ -11,6 +11,8 @@ user.premium = false;
 for (const key of Object.keys(user)) {
   console.log(`${key}: ${user[key]}`);
 }
+const { hobby, premium, mood } = user;
+console.log(hobby, premium, mood);
 //task 2
 function countProps(obj) {
   return Object.keys(obj).length;
@@ -21,8 +23,9 @@ const user = {
   premium: false,
   mood: "happy",
 };
-
 console.log(countProps(user));
+const { hobby, premium, mood } = user;
+console.log(hobby, premium, mood);
 //task 3
 function findBestEmployee(employees) {
   let maxTasks = 0;
@@ -46,6 +49,8 @@ const employees = {
 };
 
 console.log(findBestEmployee(employees));
+const { a, b, c, d } = employees;
+console.log(a, b, c, d);
 //task 4
 function countTotalSalary(employees) {
   let totalSalary = 0;
@@ -65,6 +70,8 @@ const employees = {
 };
 
 console.log(countTotalSalary(employees));
+const { a, b, c, d } = employees;
+console.log(a, b, c, d);
 //task 5
 function getAllPropValues(arr, prop) {
   const values = [];
@@ -88,6 +95,9 @@ const products = [
 console.log(getAllPropValues(products, "name"));
 console.log(getAllPropValues(products, "quantity"));
 console.log(getAllPropValues(products, "price"));
+
+const [a, b, c, d] = products;
+console.log(a, b, c, d);
 //task 6
 function calculateTotalPrice(allProducts, productName) {
   let totalPrice = 0;
@@ -113,3 +123,46 @@ console.log(calculateTotalPrice(products, "a"));
 console.log(calculateTotalPrice(products, "b"));
 console.log(calculateTotalPrice(products, "c"));
 console.log(calculateTotalPrice(products, "d"));
+const [a, b, c, d] = products;
+console.log(a, b, c, d);
+//task 7
+const account = {
+  balance: 0,
+  transactions: [],
+
+  deposit(amount) {
+    this.balance += amount;
+    this.transactions.push({
+      type: "deposit",
+      amount: amount,
+    });
+    console.log(`Deposited ${amount}. Current balance: ${this.balance}`);
+  },
+
+  withdraw(amount) {
+    if (this.balance >= amount) {
+      this.balance -= amount;
+      this.transactions.push({
+        type: "withdraw",
+        amount: amount,
+      });
+      console.log(`Withdrew ${amount}. Current balance: ${this.balance}`);
+    } else {
+      console.log(`Insufficient funds. Current balance: ${this.balance}`);
+    }
+  },
+
+  currentBalance() {
+    return this.balance;
+  },
+
+  TransactionHistory() {
+    return this.transactions;
+  },
+};
+
+account.deposit(1984);
+account.withdraw(50);
+account.withdraw(700);
+console.log(account.currentBalance());
+console.log(account.TransactionHistory());
